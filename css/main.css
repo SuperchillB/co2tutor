@@ -17,30 +17,68 @@ html {
   line-height: 1.4;
 }
 
+nav a.brand-logo {
+  height: 100%;
+}
+
+nav .brand-logo img {
+  height: 100%;
+}
+
 #scroll-button {
+  height: 40px;
   width: 40px;
+  border-radius: 100%;
   line-height: 40px;
   overflow: hidden;
   z-index: 999;
   display: none;
   cursor: pointer;
-  -moz-transform: rotate(270deg);
+  /*-moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
+  transform: rotate(270deg);*/
   position: fixed;
   bottom: 50px;
-  right: 0;
-  background-color: #DDD;
+  /*right: 0;*/
+  right: 15px;
+  /*background-color: #DDD;*/
+  background-color: #3a3a3a;
   color: #555;
   text-align: center;
   font-size: 30px;
   text-decoration: none;
 }
+#scroll-button::before, #scroll-button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 11px solid transparent;
+  top: 50%;
+  left: 50%;
+}
+#scroll-button::before {
+  -webkit-transform: translate(-50%, -82%);
+  -ms-transform: translate(-50%, -82%);
+  transform: translate(-50%, -82%);
+  border-bottom-color: #fff;
+}
+#scroll-button::after {
+  -webkit-transform: translate(-50%, -67%);
+  -ms-transform: translate(-50%, -67%);
+  transform: translate(-50%, -67%);
+  border-bottom-color: #3a3a3a;
+}
+
 #scroll-button:hover {
-  background-color: #DDF;
-  color: #000;
+  background-color: #5a5a5a;
+  /*background-color: #DDF;*/
+  /*color: #000;*/
+}
+
+#scroll-button:hover::after {
+  border-bottom-color: #5a5a5a;
 }
 
 .team-card {
@@ -67,7 +105,7 @@ html {
 }
 
 .main-logo {
-  
+
 }
 
 .section {
@@ -80,6 +118,18 @@ html {
   background-image: url("../img/scene1.jpg");
 }
 
+#section-bg .bg-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 #section-pics {
 }
 
@@ -88,6 +138,10 @@ html {
 }
 
 #section-contact {
+}
+#section-contact .send-btn {
+  display: flex;
+  justify-content: center;
 }
 
 /*
